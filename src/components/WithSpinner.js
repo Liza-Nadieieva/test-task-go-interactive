@@ -9,7 +9,7 @@ export default WrappedComponent => {
       setTimeout(() => {
         setIsLoading(false)
       }, 1000)
-    })
+    }, [])
 
     return isLoading ? <Spinner /> : <WrappedComponent {...props} />
   }
